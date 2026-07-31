@@ -144,7 +144,213 @@
       </div>
     </section>
 
-  </main>
+  
+    <!-- HTML Section with Dual Card Layout: SVG Code Viewer & Live Preview -->
+    <section class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-r-8 border-purple-600 space-y-6 my-8">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div>
+          <span class="display font-black text-xs text-purple-600 uppercase tracking-wider">דוגמת קוד והדגמה ויזואלית (SVG)</span>
+          <h2 class="display font-black text-2xl mt-1 text-stone-900">תוצר 2: כרזה מעוצבת לערוץ 17</h2>
+        </div>
+        <span class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs">דוגמה לתלמידים • כרזה וקטורית</span>
+      </div>
+
+      <p class="text-stone-600 text-sm font-medium">
+        להלן דוגמה מלאה לכרזה וקטורית בפורמט <code class="bg-stone-100 px-1.5 py-0.5 rounded text-purple-700 font-bold">SVG</code>. מימין מופיע קוד המקור המלא להעתקה, ומשמאל מופיע התוצר הוויזואלי המושלם שמתקבל ממנו.
+      </p>
+
+      <!-- Dual Box Grid Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+        
+        <!-- Box 1: Code Viewer with Copy Button -->
+        <div class="bg-slate-900 rounded-2xl p-4 shadow-inner flex flex-col justify-between border border-slate-800 relative">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+              <span class="text-xs text-slate-400 font-mono mr-2">poster_channel17.svg</span>
+            </div>
+            <button onclick="navigator.clipboard.writeText(document.getElementById('svg-code-text').innerText); alert('הקוד הועתק בהצלחה!');"
+                    class="bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 shadow">
+              <span>📋</span> <span>העתק קוד</span>
+            </button>
+          </div>
+          <pre id="svg-code-text" class="text-xs text-purple-300 font-mono overflow-x-auto max-h-[500px] overflow-y-auto p-2 ltr text-left bg-slate-950/60 rounded-xl dir-ltr select-all">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 800 1200&quot; width=&quot;100%&quot; height=&quot;auto&quot;&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id=&quot;bg-grad&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;100%&quot;&gt;
+      &lt;stop offset=&quot;0%&quot; stop-color=&quot;#0F0C20&quot; /&gt;
+      &lt;stop offset=&quot;50%&quot; stop-color=&quot;#1B153D&quot; /&gt;
+      &lt;stop offset=&quot;100%&quot; stop-color=&quot;#080512&quot; /&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient id=&quot;primary-glow&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;0%&quot;&gt;
+      &lt;stop offset=&quot;0%&quot; stop-color=&quot;#FF2E93&quot; /&gt;
+      &lt;stop offset=&quot;50%&quot; stop-color=&quot;#FF8A00&quot; /&gt;
+      &lt;stop offset=&quot;100%&quot; stop-color=&quot;#FFD600&quot; /&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient id=&quot;blue-purple&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;100%&quot;&gt;
+      &lt;stop offset=&quot;0%&quot; stop-color=&quot;#7928CA&quot; /&gt;
+      &lt;stop offset=&quot;100%&quot; stop-color=&quot;#4200FF&quot; /&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient id=&quot;card-grad&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;100%&quot;&gt;
+      &lt;stop offset=&quot;0%&quot; stop-color=&quot;rgba(255, 255, 255, 0.12)&quot; /&gt;
+      &lt;stop offset=&quot;100%&quot; stop-color=&quot;rgba(255, 255, 255, 0.03)&quot; /&gt;
+    &lt;/linearGradient&gt;
+    &lt;filter id=&quot;glow&quot; x=&quot;-20%&quot; y=&quot;-20%&quot; width=&quot;140%&quot; height=&quot;140%&quot;&gt;
+      &lt;feGaussianBlur stdDeviation=&quot;15&quot; result=&quot;blur&quot; /&gt;
+      &lt;feComposite in=&quot;SourceGraphic&quot; in2=&quot;blur&quot; operator=&quot;over&quot; /&gt;
+    &lt;/filter&gt;
+    &lt;filter id=&quot;soft-shadow&quot; x=&quot;-10%&quot; y=&quot;-10%&quot; width=&quot;120%&quot; height=&quot;120%&quot;&gt;
+      &lt;feDropShadow dx=&quot;0&quot; dy=&quot;12&quot; stdDeviation=&quot;16&quot; flood-color=&quot;#000000&quot; flood-opacity=&quot;0.6&quot;/&gt;
+    &lt;/filter&gt;
+  &lt;/defs&gt;
+
+  &lt;rect width=&quot;800&quot; height=&quot;1200&quot; fill=&quot;url(#bg-grad)&quot; rx=&quot;24&quot; /&gt;
+  &lt;circle cx=&quot;100&quot; cy=&quot;200&quot; r=&quot;250&quot; fill=&quot;#7928CA&quot; opacity=&quot;0.25&quot; filter=&quot;url(#glow)&quot; /&gt;
+  &lt;circle cx=&quot;700&quot; cy=&quot;800&quot; r=&quot;300&quot; fill=&quot;#FF2E93&quot; opacity=&quot;0.2&quot; filter=&quot;url(#glow)&quot; /&gt;
+  &lt;circle cx=&quot;400&quot; cy=&quot;600&quot; r=&quot;180&quot; fill=&quot;#4200FF&quot; opacity=&quot;0.15&quot; filter=&quot;url(#glow)&quot; /&gt;
+
+  &lt;path d=&quot;M 0 300 Q 400 200 800 300&quot; stroke=&quot;rgba(255,255,255,0.05)&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; /&gt;
+  &lt;path d=&quot;M 0 500 Q 400 400 800 500&quot; stroke=&quot;rgba(255,255,255,0.08)&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; /&gt;
+  &lt;path d=&quot;M 0 700 Q 400 800 800 700&quot; stroke=&quot;rgba(255,255,255,0.05)&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; /&gt;
+
+  &lt;g transform=&quot;translate(400, 90)&quot;&gt;
+    &lt;rect x=&quot;-220&quot; y=&quot;-25&quot; width=&quot;440&quot; height=&quot;50&quot; rx=&quot;25&quot; fill=&quot;rgba(255,255,255,0.08)&quot; stroke=&quot;rgba(255,255,255,0.2)&quot; stroke-width=&quot;1.5&quot; /&gt;
+    &lt;text x=&quot;0&quot; y=&quot;7&quot; text-anchor=&quot;middle&quot; fill=&quot;#FFD600&quot; font-family=&quot;Arial, sans-serif&quot; font-weight=&quot;800&quot; font-size=&quot;18&quot; letter-spacing=&quot;1&quot;&gt;GRAPHIC APPLICATIONS • GRADE 10&lt;/text&gt;
+  &lt;/g&gt;
+
+  &lt;rect x=&quot;60&quot; y=&quot;150&quot; width=&quot;680&quot; height=&quot;960&quot; rx=&quot;36&quot; fill=&quot;url(#card-grad)&quot; stroke=&quot;rgba(255,255,255,0.18)&quot; stroke-width=&quot;2&quot; filter=&quot;url(#soft-shadow)&quot; /&gt;
+
+  &lt;g transform=&quot;translate(400, 380)&quot;&gt;
+    &lt;circle cx=&quot;0&quot; cy=&quot;0&quot; r=&quot;160&quot; fill=&quot;url(#blue-purple)&quot; opacity=&quot;0.4&quot; filter=&quot;url(#glow)&quot; /&gt;
+    &lt;circle cx=&quot;0&quot; cy=&quot;0&quot; r=&quot;140&quot; fill=&quot;none&quot; stroke=&quot;url(#primary-glow)&quot; stroke-width=&quot;6&quot; opacity=&quot;0.8&quot; /&gt;
+    &lt;path d=&quot;M -80 -70 L -50 -90 L -50 70 L -80 70 Z&quot; fill=&quot;url(#primary-glow)&quot; /&gt;
+    &lt;path d=&quot;M -20 -90 L 70 -90 L 15 70 L -15 70 L 35 -60 L -20 -60 Z&quot; fill=&quot;url(#primary-glow)&quot; /&gt;
+    &lt;rect x=&quot;-45&quot; y=&quot;95&quot; width=&quot;90&quot; height=&quot;12&quot; rx=&quot;6&quot; fill=&quot;#FFD600&quot; /&gt;
+    &lt;path d=&quot;M -15 95 L -25 115 M 15 95 L 25 115&quot; stroke=&quot;#FFD600&quot; stroke-width=&quot;4&quot; stroke-linecap=&quot;round&quot; /&gt;
+  &lt;/g&gt;
+
+  &lt;g transform=&quot;translate(400, 640)&quot;&gt;
+    &lt;text x=&quot;0&quot; y=&quot;0&quot; text-anchor=&quot;middle&quot; fill=&quot;#FFFFFF&quot; font-family=&quot;Arial, sans-serif&quot; font-weight=&quot;900&quot; font-size=&quot;44&quot; filter=&quot;url(#soft-shadow)&quot;&gt;CELEBRATING SPECIAL BROADCASTS!&lt;/text&gt;
+    &lt;text x=&quot;0&quot; y=&quot;55&quot; text-anchor=&quot;middle&quot; fill=&quot;#FF8A00&quot; font-family=&quot;Arial, sans-serif&quot; font-weight=&quot;800&quot; font-size=&quot;30&quot;&gt;CHANNEL 17 • HOLIDAY SPECIAL&lt;/text&gt;
+  &lt;/g&gt;
+
+  &lt;rect x=&quot;250&quot; y=&quot;730&quot; width=&quot;300&quot; height=&quot;4&quot; rx=&quot;2&quot; fill=&quot;url(#primary-glow)&quot; /&gt;
+
+  &lt;g transform=&quot;translate(130, 780)&quot;&gt;
+    &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;250&quot; height=&quot;110&quot; rx=&quot;20&quot; fill=&quot;rgba(255,255,255,0.06)&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1&quot; /&gt;
+    &lt;text x=&quot;125&quot; y=&quot;45&quot; text-anchor=&quot;middle&quot; fill=&quot;#FFD600&quot; font-family=&quot;Arial, sans-serif&quot; font-weight=&quot;800&quot; font-size=&quot;18&quot;&gt;SPECIAL SCHEDULE&lt;/text&gt;
+    &lt;text x=&quot;125&quot; y=&quot;75&quot; text-anchor=&quot;middle&quot; fill=&quot;#E2E8F0&quot; font-family=&quot;Arial, sans-serif&quot; font-weight=&quot;600&quot; font-size=&quot;14&quot;&gt;Live Studio &amp;amp; Marathon Shows&lt;/text&gt;
+
+    &lt;rect x=&quot;290&quot; y=&quot;0&quot; width=&quot;250&quot; height=&quot;110&quot; rx=&quot;20&quot; fill=&quot;rgba(255,255,255,0.06)&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1&quot; /&gt;
+    &lt;text x=&quot;415&quot; y=&quot;45&quot; text-anchor=&quot;middle&quot; fill=&quot;#FF2E93&quot; font-family=&quot;Arial, sans-serif&quot; font-weight=&quot;800&quot; font-size=&quot;18&quot;&gt;FAMILY FRIENDLY&lt;/text&gt;
+    &lt;text x=&quot;415&quot; y=&quot;75&quot; text-anchor=&quot;middle&quot; fill=&quot;#E2E8F0&quot; font-family=&quot;Arial, sans-serif&quot; font-weight=&quot;600&quot; font-size=&quot;14&quot;&gt;Films, Events &amp;amp; Special Forecast&lt;/text&gt;
+  &lt;/g&gt;
+
+  &lt;g transform=&quot;translate(400, 940)&quot;&gt;
+    &lt;rect x=&quot;-240&quot; y=&quot;0&quot; width=&quot;480&quot; height=&quot;60&quot; rx=&quot;30&quot; fill=&quot;url(#primary-glow)&quot; /&gt;
+    &lt;text x=&quot;0&quot; y=&quot;38&quot; text-anchor=&quot;middle&quot; fill=&quot;#0F0C20&quot; font-family=&quot;Arial, sans-serif&quot; font-weight=&quot;900&quot; font-size=&quot;20&quot;&gt;JOIN OUR LIVE STREAM | CHANNEL 17&lt;/text&gt;
+  &lt;/g&gt;
+
+  &lt;g transform=&quot;translate(400, 1060)&quot;&gt;
+    &lt;text x=&quot;0&quot; y=&quot;0&quot; text-anchor=&quot;middle&quot; fill=&quot;#94A3B8&quot; font-family=&quot;Arial, sans-serif&quot; font-weight=&quot;600&quot; font-size=&quot;15&quot;&gt;Design: Product 2 • Final Project (30%) • Guided by Sahar&lt;/text&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</pre>
+        </div>
+
+        <!-- Box 2: Visual Preview -->
+        <div class="bg-slate-950 rounded-2xl p-4 shadow-2xl flex flex-col items-center justify-center border border-slate-800 relative overflow-hidden">
+          <div class="absolute top-3 right-3 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white z-10 border border-white/20">
+            👁️ תצוגה מקדימה בלייב
+          </div>
+          <div class="w-full flex items-center justify-center p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F0C20" />
+      <stop offset="50%" stop-color="#1B153D" />
+      <stop offset="100%" stop-color="#080512" />
+    </linearGradient>
+    <linearGradient id="primary-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF2E93" />
+      <stop offset="50%" stop-color="#FF8A00" />
+      <stop offset="100%" stop-color="#FFD600" />
+    </linearGradient>
+    <linearGradient id="blue-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928CA" />
+      <stop offset="100%" stop-color="#4200FF" />
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.12)" />
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.03)" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="1200" fill="url(#bg-grad)" rx="24" />
+  <circle cx="100" cy="200" r="250" fill="#7928CA" opacity="0.25" filter="url(#glow)" />
+  <circle cx="700" cy="800" r="300" fill="#FF2E93" opacity="0.2" filter="url(#glow)" />
+  <circle cx="400" cy="600" r="180" fill="#4200FF" opacity="0.15" filter="url(#glow)" />
+
+  <path d="M 0 300 Q 400 200 800 300" stroke="rgba(255,255,255,0.05)" stroke-width="2" fill="none" />
+  <path d="M 0 500 Q 400 400 800 500" stroke="rgba(255,255,255,0.08)" stroke-width="2" fill="none" />
+  <path d="M 0 700 Q 400 800 800 700" stroke="rgba(255,255,255,0.05)" stroke-width="2" fill="none" />
+
+  <g transform="translate(400, 90)">
+    <rect x="-220" y="-25" width="440" height="50" rx="25" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" />
+    <text x="0" y="7" text-anchor="middle" fill="#FFD600" font-family="Arial, sans-serif" font-weight="800" font-size="18" letter-spacing="1">GRAPHIC APPLICATIONS • GRADE 10</text>
+  </g>
+
+  <rect x="60" y="150" width="680" height="960" rx="36" fill="url(#card-grad)" stroke="rgba(255,255,255,0.18)" stroke-width="2" filter="url(#soft-shadow)" />
+
+  <g transform="translate(400, 380)">
+    <circle cx="0" cy="0" r="160" fill="url(#blue-purple)" opacity="0.4" filter="url(#glow)" />
+    <circle cx="0" cy="0" r="140" fill="none" stroke="url(#primary-glow)" stroke-width="6" opacity="0.8" />
+    <path d="M -80 -70 L -50 -90 L -50 70 L -80 70 Z" fill="url(#primary-glow)" />
+    <path d="M -20 -90 L 70 -90 L 15 70 L -15 70 L 35 -60 L -20 -60 Z" fill="url(#primary-glow)" />
+    <rect x="-45" y="95" width="90" height="12" rx="6" fill="#FFD600" />
+    <path d="M -15 95 L -25 115 M 15 95 L 25 115" stroke="#FFD600" stroke-width="4" stroke-linecap="round" />
+  </g>
+
+  <g transform="translate(400, 640)">
+    <text x="0" y="0" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-weight="900" font-size="44" filter="url(#soft-shadow)">CELEBRATING SPECIAL BROADCASTS!</text>
+    <text x="0" y="55" text-anchor="middle" fill="#FF8A00" font-family="Arial, sans-serif" font-weight="800" font-size="30">CHANNEL 17 • HOLIDAY SPECIAL</text>
+  </g>
+
+  <rect x="250" y="730" width="300" height="4" rx="2" fill="url(#primary-glow)" />
+
+  <g transform="translate(130, 780)">
+    <rect x="0" y="0" width="250" height="110" rx="20" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <text x="125" y="45" text-anchor="middle" fill="#FFD600" font-family="Arial, sans-serif" font-weight="800" font-size="18">SPECIAL SCHEDULE</text>
+    <text x="125" y="75" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-weight="600" font-size="14">Live Studio &amp; Marathon Shows</text>
+
+    <rect x="290" y="0" width="250" height="110" rx="20" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <text x="415" y="45" text-anchor="middle" fill="#FF2E93" font-family="Arial, sans-serif" font-weight="800" font-size="18">FAMILY FRIENDLY</text>
+    <text x="415" y="75" text-anchor="middle" fill="#E2E8F0" font-family="Arial, sans-serif" font-weight="600" font-size="14">Films, Events &amp; Special Forecast</text>
+  </g>
+
+  <g transform="translate(400, 940)">
+    <rect x="-240" y="0" width="480" height="60" rx="30" fill="url(#primary-glow)" />
+    <text x="0" y="38" text-anchor="middle" fill="#0F0C20" font-family="Arial, sans-serif" font-weight="900" font-size="20">JOIN OUR LIVE STREAM | CHANNEL 17</text>
+  </g>
+
+  <g transform="translate(400, 1060)">
+    <text x="0" y="0" text-anchor="middle" fill="#94A3B8" font-family="Arial, sans-serif" font-weight="600" font-size="15">Design: Product 2 • Final Project (30%) • Guided by Sahar</text>
+  </g>
+</svg>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+</main>
 
 </body>
 </html>
