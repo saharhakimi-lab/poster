@@ -10,6 +10,15 @@
   body { font-family: 'Assistant', sans-serif; background: #F6F4FD; color: #1B1B2F; }
   .display { font-family: 'Rubik', sans-serif; }
   .tab-btn.active { background-color: #4F46E5; color: #FFFFFF; border-color: #4F46E5; }
+  
+  /* הנפשת סיבוב אינסופי במהירות 10 שניות */
+  @keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .spin-avatar {
+    animation: spinSlow 10s linear infinite;
+  }
 </style>
 </head>
 <body class="min-h-screen pb-20">
@@ -32,7 +41,7 @@
 
   <header class="max-w-4xl mx-auto px-5 pt-10 pb-6">
     <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
-      <span class="display font-black text-sm px-4 py-1.5 rounded-full bg-white shadow-sm border border-indigo-100 text-indigo-600">מגמת יישומים גרפיים · כיתה י' · תוצר 2</span>
+      <span class="display font-black text-sm px-4 py-1.5 rounded-full bg-white shadow-sm border border-indigo-100 text-indigo-600">יישומים גרפיים עם סהר · כיתה י' · תוצר 2</span>
       <a href="https://gemini.google.com/gem/b5ce5f617ce4" target="_blank" rel="noopener"
          class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-fuchsia-600 hover:from-indigo-500 hover:to-fuchsia-500 text-white font-black px-5 py-2.5 rounded-full shadow-lg transition-all transform hover:scale-105">
         <span>🤖</span><span>שאל את טוביה על הכרזה שלך</span>
@@ -40,23 +49,25 @@
     </div>
     
     <div class="flex items-center gap-4 mb-3">
-      <span class="text-4xl">🎨</span>
+      <div class="w-14 h-14 rounded-full overflow-hidden shadow-md border-2 border-indigo-200 flex-shrink-0">
+        <img src="https://lh3.googleusercontent.com/d/1C3DR4Qd6rJX63AgBFxwWTqEZB__IF8Ne" alt="אוואטר" class="w-full h-full object-cover spin-avatar">
+      </div>
       <h1 class="display font-black text-4xl sm:text-5xl leading-tight">מעצבים <span class="text-indigo-600">כרזת מותג</span> חזקה</h1>
     </div>
     <p class="text-lg text-stone-700 font-semibold max-w-2xl mb-6">
       אחרי שיש לנו לוגו וכיוון כללי, התוצר הגדול הראשון שלנו הוא כרזה (פוסטר) פרסומית או קמפיין חברתי.
     </p>
 
-    <!-- סרגל טאבים משולש -->
+    <!-- סרגל טאבים משולש (ללא אייקונים) -->
     <div class="flex flex-wrap gap-2 sm:gap-3 border-b-2 border-indigo-100 pb-2">
-      <button onclick="switchTab('guide')" id="tab-btn-guide" class="tab-btn active font-black text-sm sm:text-base px-4 sm:px-5 py-2.5 rounded-2xl border-2 border-transparent transition-all shadow-sm flex items-center gap-2">
-        <span>📖</span><span>מדריך והנחיות</span>
+      <button onclick="switchTab('guide')" id="tab-btn-guide" class="tab-btn active font-black text-sm sm:text-base px-4 sm:px-5 py-2.5 rounded-2xl border-2 border-transparent transition-all shadow-sm flex items-center justify-center">
+        <span>מדריך והנחיות</span>
       </button>
-      <button onclick="switchTab('example')" id="tab-btn-example" class="tab-btn font-black text-sm sm:text-base px-4 sm:px-5 py-2.5 rounded-2xl border-2 border-indigo-200 bg-white text-indigo-600 hover:bg-indigo-50 transition-all shadow-sm flex items-center gap-2">
-        <span>👁️</span><span>דוגמת כרזה (SVG)</span>
+      <button onclick="switchTab('example')" id="tab-btn-example" class="tab-btn font-black text-sm sm:text-base px-4 sm:px-5 py-2.5 rounded-2xl border-2 border-indigo-200 bg-white text-indigo-600 hover:bg-indigo-50 transition-all shadow-sm flex items-center justify-center">
+        <span>דוגמת כרזה (SVG)</span>
       </button>
-      <button onclick="switchTab('generator')" id="tab-btn-generator" class="tab-btn font-black text-sm sm:text-base px-4 sm:px-5 py-2.5 rounded-2xl border-2 border-indigo-200 bg-white text-indigo-600 hover:bg-indigo-50 transition-all shadow-sm flex items-center gap-2">
-        <span>🛠️</span><span>מחולל הכרזה שלי (סדנה)</span>
+      <button onclick="switchTab('generator')" id="tab-btn-generator" class="tab-btn font-black text-sm sm:text-base px-4 sm:px-5 py-2.5 rounded-2xl border-2 border-indigo-200 bg-white text-indigo-600 hover:bg-indigo-50 transition-all shadow-sm flex items-center justify-center">
+        <span>מחולל הכרזה שלי (סדנה)</span>
       </button>
     </div>
   </header>
